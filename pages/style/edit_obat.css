@@ -1,0 +1,341 @@
+:root {
+  --green: #2bae66ff;
+  --softWhite: rgb(245, 250, 247);
+  --white: white;
+  --error: rgb(215, 0, 0);
+  --fontHead: "Roboto", sans-serif;
+  --fontColor: rgb(32, 139, 80);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  height: 100%;
+  font-size: 100%;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+/* Container */
+.container {
+  margin: 1rem 1rem auto;
+  display: flex;
+  border: 1px solid var(--green);
+  width: auto;
+  height: 95vh;
+  overflow: hidden;
+}
+/* Navigation */
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--softWhite);
+  flex-grow: 1;
+  width: 15vw;
+}
+/* info pada tampilan desktop */
+.info-desktop {
+  background-color: var(--softWhite);
+  text-align: center;
+  position: sticky;
+  top: 1rem;
+  color: var(--green);
+  font-weight: bolder;
+}
+
+/* info pada tampilan mobile */
+
+.info-mobile {
+  display: none;
+  height: 3rem;
+  color: var(--green);
+  background-color: var(--white);
+  border-bottom: 0.5px solid var(--green);
+  position: relative;
+}
+.info-mobile .judul {
+  width: 90vw;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.info-mobile .user {
+  width: 10vw;
+  text-align: center;
+  padding: 1rem;
+  color: var(--green);
+}
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+nav ul li {
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 3rem;
+}
+nav li a {
+  text-decoration: none;
+  line-height: 3rem;
+  font-size: 1.1vw;
+  text-align: left;
+  padding: 0 10px;
+  color: var(--green);
+}
+nav ul li a:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+nav ul li i {
+  width: 1.5rem;
+}
+
+.content {
+  background-color: var(--softWhite);
+  flex-grow: 1;
+  border-left: 2px solid var(--green);
+  width: 85vw;
+  padding: 0 1rem 0rem 1rem;
+  color: var(--fontColor);
+  overflow: auto;
+}
+
+.fieldset {
+  width: 100%;
+  margin-bottom: 5rem;
+  overflow: auto;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+input {
+  background-color: var(--softWhite);
+  height: 3rem;
+  outline: none;
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+input:focus {
+  border-bottom: 2px solid var(--green);
+}
+
+.field input[type="submit"] {
+  height: 3rem;
+  background-color: var(--green);
+  color: var(--softWhite);
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--green);
+}
+.field input[type="submit"]:hover {
+  background-color: var(--softWhite);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.field select {
+  height: 2.5rem;
+  background-color: var(--softWhite);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  outline: none;
+}
+
+#error {
+  color: var(--error);
+  max-height: 3rem;
+  padding: 1rem;
+  position: absolute;
+  background-color: var(--error);
+  color: var(--softWhite);
+  border: 1px solid var(--softWhite);
+  top: 3rem;
+  right: 1rem;
+  display: flex;
+  border-radius: 0.2rem;
+  animation: normal;
+  animation-name: run;
+  animation-duration: 1s;
+}
+
+#error p {
+  line-height: 100%;
+  padding-right: 10px;
+  width: 100%;
+}
+#error button {
+  height: 25px;
+  min-width: 25px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--softWhite);
+  background-color: var(--softWhite);
+  color: var(--green);
+  line-height: 100%;
+  cursor: pointer;
+}
+
+@keyframes run {
+  0% {
+    top: -10rem;
+  }
+  /* 
+    50% {
+      top: -1rem;
+    } */
+
+  100% {
+    top: 3rem;
+  }
+}
+
+#success {
+  color: var(--error);
+  max-height: 5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  background-color: var(--green);
+  color: var(--softWhite);
+  border: 1px solid var(--softWhite);
+
+  top: 3rem;
+  right: 1rem;
+  margin: 1rem 0 auto;
+  display: flex;
+  border-radius: 0.2rem;
+}
+
+#success a {
+  color: var(--green);
+  font-weight: bolder;
+  text-decoration: none;
+}
+#success p {
+  margin: 0.5rem 0;
+  padding: 0;
+  width: 100%;
+}
+#success button {
+  right: 1px;
+  flex-wrap: 1;
+  max-height: 1.5rem;
+  border-radius: 100%;
+  border: 1px solid var(--softWhite);
+  background-color: var(--softWhite);
+  color: var(--green);
+  line-height: 100%;
+  cursor: pointer;
+}
+
+#success {
+  bottom: 15%;
+  position: absolute;
+  animation: normal;
+  animation-name: run;
+  animation-duration: 1s;
+}
+
+/* ketika layar melebar diatas 800px */
+@media only screen and (min-width: 821px) {
+  .mobile {
+    display: none;
+  }
+}
+/* Ketika layar mengecil dibawah 800px */
+@media only screen and (max-width: 821px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    border: 0px;
+  }
+  .info-mobile {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+  }
+  .navigation {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--green);
+  }
+  .content {
+    border-left: 0px;
+    margin: 0;
+    width: auto;
+    overflow: scroll;
+  }
+  nav.desktop {
+    display: none;
+  }
+  nav li a {
+    font-size: 90%;
+  }
+  nav.mobile ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 10px 10px 10px 10px var(--green);
+  }
+  nav.mobile ul li {
+    background-color: var(--white);
+    height: 4rem;
+  }
+  nav.mobile ul li a {
+    text-align: center;
+    padding-left: 0px;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .field {
+    width: 100%;
+  }
+  .field input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/* ------ DISABLE ARROW IN INPUT------ */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select[disabled] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
